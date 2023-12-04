@@ -38,47 +38,7 @@ def get_personal_data():
 
 def get_author_dict():
     return {
-        'Andreas Geiger': 'https://www.cvlibs.net/',
-        'Songyou Peng': 'https://pengsongyou.github.io/',
-        'Zehao Yu': 'https://niujinshuchong.github.io/',
-        'Torsten Sattler': 'https://tsattler.github.io/',
-        'Katja Schwarz': 'https://katjaschwarz.github.io/',
-        'Axel Sauer': 'https://axelsauer.com/',
-        'Jonathan Barron': 'https://jonbarron.info/',
-        'Ben Mildenhall': 'https://bmild.github.io/',
-        'Mehdi Sajjadi': 'https://msajjadi.com/',
-        'Noha Radwan': 'http://www2.informatik.uni-freiburg.de/~radwann/',
-        'Chiyu Jiang': 'https://www.maxjiang.ml/',
-        'Yiyi Liao': 'https://yiyiliao.github.io/',
-        'Marc Pollefeys': 'https://people.inf.ethz.ch/pomarc/',
-        'Michael Oechsle': 'https://moechsle.github.io/',
-        'Christian Reiser': 'https://creiser.github.io/',
-        'Lars Mescheder': 'https://scholar.google.de/citations?user=h2k1gL4AAAAJ&hl=de',
-        'Thilo Strauss': 'https://scholar.google.com/citations?user=VlymtLQAAAAJ&hl=en',
-        'Sebastian Nowozin': 'http://www.nowozin.net/sebastian/',
-        'Marie-Julie Rakotosaona': 'http://www.lix.polytechnique.fr/Labo/Marie-Julie.RAKOTOSAONA/',
-        'Fabian Manhardt': 'https://campar.in.tum.de/Main/FabianManhardt',
-        'Diego Martin Arroyo': 'https://martinarroyo.net/',
-        'Abhijit Kundu': 'https://abhijitkundu.info/',
-        'Federico Tombari': 'https://www.cs.cit.tum.de/camp/members/senior-research-scientists/federico-tombari/',
-        'Anpei Chen': 'https://apchenstu.github.io/',
-        'Bozidar Antic': 'https://bozidarantic.com/',
-        'Apratim Bhattacharyya': 'https://apratimbhattacharyya18.github.io/',
-        'Siyu Tang': 'https://inf.ethz.ch/people/person-detail.MjYyNzgw.TGlzdC8zMDQsLTg3NDc3NjI0MQ==.html',
-        'Hidenobu Matsuki': 'https://dblp.org/pid/225/4487.html',
-        'Keisuke Tateno': 'https://campar.in.tum.de/Main/KeisukeTateno',
-        'Alessio Tonioni': 'https://alessiotonioni.github.io/',
-        'Christina Tsalicoglou': 'https://scholar.google.ch/citations?user=7D10QQkAAAAJ&hl=en', 
-        'Amit Raj': 'https://amitraj93.github.io/',
-        'Srinivas Kaza': 'https://www.linkedin.com/in/srinivas-kaza-64223b74',
-        'Ben Poole': 'https://poolio.github.io/',
-        'Nataniel Ruiz': 'https://natanielruiz.github.io/',
-        'Shiran Zada': 'https://scholar.google.com/citations?user=I2qheksAAAAJ',
-        'Kfir Aberman': 'https://kfiraberman.github.io/',
-        'Michael Rubinstein': 'http://people.csail.mit.edu/mrub/',
-        'Yuanzhen Li': 'http://people.csail.mit.edu/yzli/',
-        'Varun Jampani': 'https://varunjampani.github.io/',
-        'Francis Engelmann': 'https://francisengelmann.github.io/',
+        
         }
 
 def generate_person_html(persons, connection=", ", make_bold=True, make_bold_name='Michael Niemeyer', add_links=True):
@@ -101,13 +61,13 @@ def generate_person_html(persons, connection=", ", make_bold=True, make_bold_nam
 
 def get_paper_entry(entry_key, entry):
     s = """<div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3">"""
-    s += f"""<img src="{entry.fields['img']}" class="img-fluid img-thumbnail" alt="Project image">"""
+    #s += f"""<img src="{entry.fields['img']}" class="img-fluid img-thumbnail" alt="Project image">"""
     s += """</div><div class="col-sm-9">"""
 
     if 'award' in entry.fields.keys():
-        s += f"""<a href="{entry.fields['html']}" target="_blank">{entry.fields['title']}</a> <span style="color: red;">({entry.fields['award']})</span><br>"""
+        s += f"""<a href="{entry.fields['url']}" target="_blank">{entry.fields['title']}</a> <span style="color: red;">({entry.fields['award']})</span><br>"""
     else:
-        s += f"""<a href="{entry.fields['html']}" target="_blank">{entry.fields['title']}</a> <br>"""
+        s += f"""<a href="{entry.fields['url']}" target="_blank">{entry.fields['title']}</a> <br>"""
 
     s += f"""{generate_person_html(entry.persons['author'])} <br>"""
     s += f"""<span style="font-style: italic;">{entry.fields['booktitle']}</span>, {entry.fields['year']} <br>"""
