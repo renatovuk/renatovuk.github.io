@@ -1,3 +1,5 @@
+Repo based on https://github.com/m-niemeyer/m-niemeyer.github.io
+
 # Personal Website
 
 This repository contains the python script to generate [my homepage](https://m-niemeyer.github.io/). It is very easy to adapt to your needs, and easy to maintain as the papers are crawled automatically from `publication_list.bib` and the talks from `talk_list.bib`.
