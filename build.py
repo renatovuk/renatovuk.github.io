@@ -13,13 +13,10 @@ def get_personal_data():
                 </p>
                 <p>For any inquiries, feel free to reach out to me via mail!</p>
                 <p>
-                    <a href="https://m-niemeyer.github.io/assets/other/bio.txt" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-graduation-cap"></i> Bio</a>
-                    <a href="https://m-niemeyer.github.io/assets/pdf/CV_Niemeyer_Michael.pdf" target="_blank" style="margin-right: 5px"><i class="fa fa-address-card fa-lg"></i> CV</a>
                     <a href="mailto:renato.vukovic@hhu.de" style="margin-right: 5px"><i class="far fa-envelope-open fa-lg"></i> Mail</a>
                     <a href="https://scholar.google.com/citations?user=fzVYsrMAAAAJ&hl=en" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-book"></i> Scholar</a>
                     <a href="https://github.com/renatovuk" target="_blank" style="margin-right: 5px"><i class="fab fa-github fa-lg"></i> Github</a>
                     <a href="https://www.linkedin.com/in/renato-vukovic" target="_blank" style="margin-right: 5px"><i class="fab fa-linkedin fa-lg"></i> LinkedIn</a>
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#demo" data-toggle="collapse" style="margin-left: -6px; margin-top: -2px;"><i class="fa-solid fa-trophy"></i>Awards</button>
                     <div id="demo" class="collapse">
                 </div>
                 </p>
