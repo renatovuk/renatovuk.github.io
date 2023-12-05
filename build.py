@@ -94,7 +94,7 @@ def get_talk_entry(entry_key, entry):
     s += f"""{entry.fields['title']}<br>"""
     s += f"""<span style="font-style: italic;">{entry.fields['booktitle']}</span>, {entry.fields['year']} <br>"""
 
-    artefacts = {'slides': 'Slides', 'video': 'Recording'}
+    artefacts = {'slides': 'Slides', 'video': 'Recording', "link": "Link"}
     i = 0
     for (k, v) in artefacts.items():
         if k in entry.fields.keys():
